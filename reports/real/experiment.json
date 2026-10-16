@@ -1,0 +1,322 @@
+{
+  "study_version": "2.0.0",
+  "data_type": "public_historical",
+  "analysis_status": "descriptive_historical_confrontation_not_impact_calibration",
+  "real_design": {
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "month": "2026-01",
+    "training_days": 14,
+    "lookback": 14,
+    "bar_minutes": 30,
+    "quantity_adv_ratios": [
+      0.05,
+      0.1
+    ],
+    "spread_bps_assumed": 2.0,
+    "models": {
+      "sqrt": {
+        "impact_exponent": 0.5,
+        "impact_coefficient": 0.05
+      },
+      "linear": {
+        "impact_exponent": 1.0,
+        "impact_coefficient": 0.15811388300841897
+      }
+    },
+    "deadline_modes": [
+      "soft",
+      "common_deadline"
+    ],
+    "side": "buy",
+    "bootstrap_replications": 2000,
+    "pov_rate_convention": "quantity_divided_by_forecast_daily_volume",
+    "analysis_status": "descriptive_historical_confrontation_not_impact_calibration"
+  },
+  "design_sha256": "7b4415cb3aca1c6ca2c05faa3d75050a01efcd79aeb13b9d35481ea158340ea4",
+  "input_fingerprint_sha256": "7e90c7308606947dd3a6203de237ead95ec56cfcd6c6a26de11bf50b13d46cb6",
+  "sources": [
+    {
+      "source": "Binance Vision",
+      "source_documentation": "https://github.com/binance/binance-public-data",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-01.zip.CHECKSUM",
+      "sha256": "d28b369da32a6ea84ba0af517b1847ab67b2fcc1e0e111c1b24d56ae07240cb9",
+      "market_csv_sha256": "a42b6ec3c025be517443dcca4187441de0973de582781598a21c02a253bdee91",
+      "data_license": "CC BY-NC-SA 4.0 (Binance Vision Dataset Terms)",
+      "terms_url": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+      "accessed_utc": "2026-10-16T13:22:41.015348+00:00",
+      "research_use": "non-commercial educational historical research",
+      "derived_results_license": "CC BY-NC-SA 4.0",
+      "symbol": "BTCUSDT",
+      "month": "2026-01",
+      "raw_minutes": 44640,
+      "expected_minutes": 44640,
+      "sessions": 31,
+      "bars_per_session": 48,
+      "missing_minutes": 0,
+      "duplicate_minutes": 0,
+      "zero_volume_bars": 0,
+      "timestamp_unit": "us",
+      "timezone": "UTC",
+      "price_proxy": "bar_trade_vwap_quote_volume_divided_by_base_volume_not_bid_ask_mid",
+      "spread_bps_assumed": 2.0,
+      "model_asset_unit": 1e-06,
+      "lot_size_claim": "model_unit_only_not_exchange_trading_filter",
+      "zero_volume_price": "last_close_reference_only_no_execution"
+    },
+    {
+      "source": "Binance Vision",
+      "source_documentation": "https://github.com/binance/binance-public-data",
+      "archive_url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-01.zip",
+      "checksum_url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/1m/ETHUSDT-1m-2026-01.zip.CHECKSUM",
+      "sha256": "cadd060ab73bd03fee94708b78738144da76d007fc2170d8ad2cec678de7a654",
+      "market_csv_sha256": "b4f6dc3f3374ebbe06497194036b5cfae20758448edfe9633d16648d97f28289",
+      "data_license": "CC BY-NC-SA 4.0 (Binance Vision Dataset Terms)",
+      "terms_url": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+      "accessed_utc": "2026-10-16T13:22:41.330276+00:00",
+      "research_use": "non-commercial educational historical research",
+      "derived_results_license": "CC BY-NC-SA 4.0",
+      "symbol": "ETHUSDT",
+      "month": "2026-01",
+      "raw_minutes": 44640,
+      "expected_minutes": 44640,
+      "sessions": 31,
+      "bars_per_session": 48,
+      "missing_minutes": 0,
+      "duplicate_minutes": 0,
+      "zero_volume_bars": 0,
+      "timestamp_unit": "us",
+      "timezone": "UTC",
+      "price_proxy": "bar_trade_vwap_quote_volume_divided_by_base_volume_not_bid_ask_mid",
+      "spread_bps_assumed": 2.0,
+      "model_asset_unit": 1e-06,
+      "lot_size_claim": "model_unit_only_not_exchange_trading_filter",
+      "zero_volume_price": "last_close_reference_only_no_execution"
+    }
+  ],
+  "terms_url": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+  "data_and_derived_results_license": "CC BY-NC-SA 4.0",
+  "code_license": "MIT",
+  "price_proxy": "bar_trade_vwap_not_bid_ask_mid",
+  "decision_convention": "first_bar_first_transaction_open",
+  "arrival_convention": "first_bar_first_transaction_open",
+  "terminal_convention": "last_bar_last_transaction_close",
+  "uncertainty_scope": "paired_days_per_asset_conditional_on_hypothetical_execution_model",
+  "bootstrap_unit": "UTC_day_per_asset_no_cross_asset_pooling",
+  "volatility_assumption": "fixed_daily_volatility_0.02_not_estimated_from_holdout",
+  "impact_calibration": "none",
+  "protocol": {
+    "version": "2.0.0",
+    "frozen_on": "2026-10-15",
+    "question": "Quel coût supplémentaire accompagne une meilleure probabilité de terminer lorsque le volume est mal prévu ?",
+    "n_buckets": 26,
+    "training": {
+      "seed": 31000,
+      "n_days": 30,
+      "lookback": 20
+    },
+    "development_seeds": [
+      41000,
+      41001,
+      41002,
+      41003,
+      41004,
+      41005,
+      41006,
+      41007,
+      41008,
+      41009,
+      41010,
+      41011
+    ],
+    "test_seeds": [
+      51000,
+      51001,
+      51002,
+      51003,
+      51004,
+      51005,
+      51006,
+      51007,
+      51008,
+      51009,
+      51010,
+      51011,
+      51012,
+      51013,
+      51014,
+      51015,
+      51016,
+      51017,
+      51018,
+      51019,
+      51020,
+      51021,
+      51022,
+      51023,
+      51024,
+      51025,
+      51026,
+      51027,
+      51028,
+      51029,
+      51030,
+      51031,
+      51032,
+      51033,
+      51034,
+      51035,
+      51036,
+      51037,
+      51038,
+      51039,
+      51040,
+      51041,
+      51042,
+      51043,
+      51044,
+      51045,
+      51046,
+      51047,
+      51048,
+      51049,
+      51050,
+      51051,
+      51052,
+      51053,
+      51054,
+      51055,
+      51056,
+      51057,
+      51058,
+      51059,
+      51060,
+      51061,
+      51062,
+      51063,
+      51064,
+      51065,
+      51066,
+      51067,
+      51068,
+      51069,
+      51070,
+      51071,
+      51072,
+      51073,
+      51074,
+      51075,
+      51076,
+      51077,
+      51078,
+      51079
+    ],
+    "quantity_adv_ratios": [
+      0.05,
+      0.1
+    ],
+    "strategies": [
+      "TWAP",
+      "VWAP",
+      "POV",
+      "ADAPTIVE"
+    ],
+    "deadline_modes": [
+      "soft",
+      "common_deadline"
+    ],
+    "side": "buy",
+    "scenarios": {
+      "normal": {
+        "volume_multiplier": 1.0,
+        "volatility_multiplier": 1.0,
+        "spread_multiplier": 1.0,
+        "profile": "unchanged"
+      },
+      "low_volume": {
+        "volume_multiplier": 0.55,
+        "volatility_multiplier": 1.0,
+        "spread_multiplier": 1.0,
+        "profile": "unchanged"
+      },
+      "midday_shutdown": {
+        "volume_multiplier": 1.0,
+        "volatility_multiplier": 1.0,
+        "spread_multiplier": 1.0,
+        "profile": "middle_third_zero"
+      },
+      "late_shift": {
+        "volume_multiplier": 1.0,
+        "volatility_multiplier": 1.0,
+        "spread_multiplier": 1.0,
+        "profile": "linear_tilt_0.2_to_2.0_preserve_total"
+      },
+      "stressed": {
+        "volume_multiplier": 0.55,
+        "volatility_multiplier": 2.0,
+        "spread_multiplier": 2.0,
+        "profile": "unchanged"
+      }
+    },
+    "models": {
+      "sqrt": {
+        "impact_exponent": 0.5,
+        "impact_coefficient": 0.05
+      },
+      "linear": {
+        "impact_exponent": 1.0,
+        "impact_coefficient": 0.15811388300841897
+      }
+    },
+    "execution": {
+      "daily_volatility": 0.02,
+      "fee_bps": 0.5,
+      "max_participation": 0.15,
+      "terminal_fraction": 0.2,
+      "terminal_max_participation": 0.4,
+      "catchup_gain": 1.0
+    },
+    "bootstrap": {
+      "replications": 2000,
+      "confidence_level": 0.95,
+      "seed": 61000,
+      "unit": "independent_path_with_paired_strategies"
+    },
+    "primary_contrast": {
+      "strategy": "ADAPTIVE",
+      "baseline": "VWAP",
+      "scenario": "low_volume",
+      "quantity_adv_ratio": 0.1,
+      "deadline_mode": "common_deadline",
+      "impact_model": "sqrt"
+    },
+    "decision_thresholds": {
+      "minimum_saving_bps": 0.5,
+      "fill_noninferiority_pp": 1.0,
+      "completion_noninferiority_pp": 1.0,
+      "q95_cost_margin_bps": 2.0,
+      "illustrative_completion_probability_target": 0.95
+    },
+    "grid_check": {
+      "n_buckets": [
+        26,
+        52,
+        104
+      ],
+      "total_quantity": 10400,
+      "total_market_volume": 104000,
+      "mid_price": 100.0,
+      "spread_bps": 2.0
+    },
+    "interpretation": "Paramètres pédagogiques non calibrés. Contraste principal unique, autres cellules descriptives. Aucun classement universel ni validation empirique."
+  },
+  "software": {
+    "python": "3.11.9",
+    "numpy": "1.26.4",
+    "pandas": "3.0.5",
+    "matplotlib": "3.10.8"
+  }
+}

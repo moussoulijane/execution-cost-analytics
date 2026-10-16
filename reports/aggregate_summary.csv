@@ -1,0 +1,5 @@
+strategy,evaluated_sessions,mean_fill_rate,completion_probability,mean_cost_bps,std_cost_bps,mean_vwap_slippage_bps
+TWAP,10,1,1,-3.074244914,105.0868734,3.675405316
+VWAP,10,1,1,-3.488161172,103.6241853,3.273489063
+POV,10,0.60152,0,-1.347684251,138.0686958,3.092960418
+ADAPTIVE,10,1,1,-3.488161172,103.6241853,3.273489063

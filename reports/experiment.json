@@ -1,0 +1,45 @@
+{
+  "data_type": "synthetic",
+  "quantity": 50000,
+  "side": "buy",
+  "initial_training_days": 30,
+  "lookback": 20,
+  "evaluated_sessions": [
+    "2026-02-16",
+    "2026-02-17",
+    "2026-02-18",
+    "2026-02-19",
+    "2026-02-20",
+    "2026-02-23",
+    "2026-02-24",
+    "2026-02-25",
+    "2026-02-26",
+    "2026-02-27"
+  ],
+  "n_buckets": 26,
+  "participation": 0.03,
+  "config": {
+    "side": "buy",
+    "daily_volatility": 0.02,
+    "impact_coefficient": 0.05,
+    "fee_bps": 0.5,
+    "max_participation": 0.15,
+    "impact_exponent": 0.5,
+    "deadline_mode": "soft",
+    "terminal_fraction": 0.2,
+    "terminal_max_participation": 0.4
+  },
+  "daily_volume_convention": "forecast_each_session_in_forecast_metrics.csv",
+  "decision_convention": "previous_session_last_mid",
+  "terminal_convention": "current_session_last_mid",
+  "impact_convention": "temporary_realized_local_participation_not_calibrated",
+  "input_fingerprint_sha256": "12fe40262678140923093611398ae11ee71dc44badbdccae15d2c64b8378cb18",
+  "seed": 42,
+  "generated_days": 40,
+  "software": {
+    "python": "3.11.9",
+    "numpy": "1.26.4",
+    "pandas": "3.0.5",
+    "matplotlib": "3.10.8"
+  }
+}

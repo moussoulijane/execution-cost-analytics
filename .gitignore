@@ -1,0 +1,21 @@
+# Python : fichiers generes localement
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Carnets Jupyter : sauvegardes automatiques
+.ipynb_checkpoints/
+
+# Configuration locale et secrets
+.env
+.env.*
+!.env.example
+
+# Donnees et resultats generes (ajoutes au parcours plus tard)
+data/
+outputs/
